@@ -8,7 +8,9 @@
     "inspect": "bankai inspect index.js",
     "start": "bankai start index.js",
     "test": "standard && npm run test-deps",
-    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons"
+    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons",
+    "deploy": "cd dist && now -A ../now.json && now alias -A ../now.json",
+    "release": "npm run build && npm run deploy"
   },
   "dependencies": {
     "choo": "^6.7.0",
