@@ -52,11 +52,11 @@ function viewRating(rating) {
   // This is silly, but cba to import a library for this
   return !!rating
     ? html`
-    <div>
+    <div class="code">
       ${[0, 1, 2, 3, 4].map(i => (i < rating ? '+' : '-'))}
     </div>
   `
-    : html`<p className="mv0 f6 silver">not yet visited</p>`;
+    : html`<p class="mv0 f6 silver">not yet visited</p>`;
 }
 
 function viewFooter() {
