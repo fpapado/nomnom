@@ -49,10 +49,11 @@ function viewItem(item) {
 }
 
 function viewRating(rating) {
+  // This is silly, but cba to import a library for this
   return !!rating
     ? html`
     <div>
-      ${[0, 1, 2, 3, 4, 5].map(i => (i < rating ? '+' : '-'))}
+      ${[0, 1, 2, 3, 4].map(i => (i < rating ? '+' : '-'))}
     </div>
   `
     : html`<p className="mv0 f6 silver">not yet visited</p>`;
@@ -74,7 +75,7 @@ function viewFooter() {
 
 function viewContribution() {
   return html`
-    <a href="https://github.com/fpapado/nomnom/data/places/js" class="link near-black hover-light-red">
+    <a href="https://github.com/fpapado/nomnom/blob/master/data/places.js" class="link near-black hover-light-red">
       <p class="w4 pa3 ma0 f6 fw6 lh-copy ba bw1 b--near-black" style="transform: rotate3d(0, 0, 1, 10deg)">
           Have a suggestion?
       </p>
