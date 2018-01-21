@@ -53,9 +53,8 @@ function viewRating(rating) {
   return !!rating
     ? html`
     <div class="code">
-      ${[0, 1, 2, 3, 4].map(i => (i < rating ? '+' : '-'))}
-    </div>
-  `
+      ${[0, 1, 2, 3, 4].map(i => (i < rating ? '+' : html`&minus;`))}
+    </div>`
     : html`<p class="mv0 f6 silver">not yet visited</p>`;
 }
 
