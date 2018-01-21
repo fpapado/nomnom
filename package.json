@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "bankai build index.js",
+    "build": "bankai build index.js && npm run copy-favicon",
     "create": "choo-scaffold",
     "inspect": "bankai inspect index.js",
     "start": "bankai start index.js",
     "test": "standard && npm run test-deps",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons",
     "deploy": "cd dist && now -A ../now.json && now alias -A ../now.json",
+    "copy-favicon": "cp assets/favicon.ico dist/",
     "release": "npm run build && npm run deploy"
   },
   "dependencies": {
