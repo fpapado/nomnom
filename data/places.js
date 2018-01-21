@@ -4,8 +4,8 @@ const places = [
   {name: "Via Tribunali"},
   {name: "Skiffer"},
   {name: "Fornitaly"},
-  {name: "Piazza"},
-  {name: "...next?"},
+  {name: "Pjazza"},
+  {name: "Roslund"},
 ];
 
 module.exports = places;
