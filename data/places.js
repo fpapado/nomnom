@@ -1,4 +1,4 @@
-const items = [
+const places = [
   {name: "B-smokery", rating: 5},
   {name: "Putte's", rating: 4},
   {name: "Via Tribunali"},
@@ -8,5 +8,5 @@ const items = [
   {name: "...next?"},
 ];
 
-module.exports = items;
+module.exports = places;
 

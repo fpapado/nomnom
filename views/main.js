@@ -1,8 +1,7 @@
 var html = require('choo/html');
-var items = require('../data/items');
-import range from 'ramda/src/range';
+var items = require('../data/places');
 
-var TITLE = '🚂🚋🚋';
+var TITLE = 'Nomnomnom';
 
 module.exports = view;
 
@@ -53,7 +52,7 @@ function viewRating(rating) {
   return !!rating
     ? html`
     <div>
-      ${range(0, 5).map(i => (i < rating ? '+' : '-'))}
+      ${[0, 1, 2, 3, 4, 5].map(i => (i < rating ? '+' : '-'))}
     </div>
   `
     : html`<p className="mv0 f6 silver">not yet visited</p>`;
