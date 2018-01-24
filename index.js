@@ -3,6 +3,7 @@ var choo = require('choo')
 var store = require('./stores/clicks')
 
 css('tachyons')
+css('./css/styles')
 
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
